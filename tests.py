@@ -7,10 +7,14 @@ class FirstLargest(unittest.TestCase):
     def test_largest_is_first(self):
         given = [1,2,3,2,1]
         expect = 3
-        got = largest_element(given)
+        got = largest_element(given,False)
         self.assertEqual(got, expect)
    
-    """ ADD MORE  """
+    def test_largest_is_first_location(self):
+        given = [1,2,3,2,1]
+        expect = 3, 2
+        got = largest_element(given, True)
+        self.assertEqual(got, expect)
 
 if __name__ == '__main__':
     unittest.main()
